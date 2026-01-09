@@ -1,137 +1,127 @@
-Loan Default Prediction System (HWELDP)
+# Loan Default Prediction System (HWELDP)
 
-Hybrid Weighted Ensemble Machine Learning for Credit Risk Prediction
+**Hybrid Weighted Ensemble Machine Learning for Credit Risk Prediction**
 
-📌 Problem Statement
+## 📌 Problem Statement
 
-Loan defaults represent a significant financial risk for lending institutions. Single-model approaches often fail to generalize across diverse borrower profiles and changing economic conditions.
+Loan defaults are a major risk for financial institutions. Traditional single-model approaches often fail to generalize across borrower profiles and economic conditions.
+This project builds a **robust, production-style credit risk prediction system** that estimates the probability of loan default using a **hybrid weighted ensemble of tree-based ML models**, exposed through a Flask web application.
 
-This project implements a production-oriented credit risk prediction system that estimates the probability of loan default using a hybrid weighted ensemble of tree-based machine learning models, exposed through a Flask web application.
+## 🧠 Solution Overview
 
-🧠 Solution Overview
+Instead of relying on one algorithm, this system combines multiple high-performing gradient boosting models and assigns **dynamic weights based on validation AUC**, improving stability, calibration, and real-world reliability.
 
-Instead of relying on a single algorithm, this system combines multiple high-performing gradient boosting models and assigns dynamic weights based on validation ROC-AUC, improving robustness, calibration, and real-world reliability.
+The application provides:
 
-Key capabilities:
+- Binary default prediction
+- Probability-based confidence score
+- Real-time inference via web UI
+- Transparent model comparison and evaluation
 
-Binary loan default prediction
+## ⚙️ Models Used
 
-Probability-based confidence scoring
-
-Real-time inference via a web interface
-
-Transparent model comparison and evaluation
-
-⚙️ Models Used
-
-XGBoost
-
-LightGBM
-
-CatBoost
+- **XGBoost**
+- **LightGBM**
+- **CatBoost**
 
 Each model is trained independently.
-Final predictions are generated using a Weighted Soft Voting Ensemble:
+Final prediction is computed using a **Weighted Soft Voting Ensemble**, where:
 
 Final Probability = Σ (Model Probability × AUC-based Weight)
 
-Weights are derived from validation ROC-AUC scores, prioritizing models that generalize better.
+Weights are derived from validation AUC scores to prioritize better-generalizing models.
 
-📊 Model Evaluation
+## 📊 Model Evaluation
 
-Models are evaluated using:
+The system evaluates models using:
 
-ROC-AUC (primary metric)
-
-Precision, Recall, F1-Score
-
-ROC Curves and comparative analysis
+- ROC-AUC (primary metric)
+- Precision, Recall, F1-Score
+- ROC Curves and Comparison Tables
 
 Automated scripts generate:
 
-Model comparison tables (CSV, JSON)
+- Model comparison tables (`CSV`, `JSON`)
+- ROC and performance visualizations
+- Ensemble vs individual model analysis
 
-ROC curves and performance visualizations
+This ensures **reproducibility and auditability**, critical for financial ML systems.
 
-Ensemble vs individual model benchmarking
+## 🖥️ Web Application
 
-This ensures reproducibility, transparency, and auditability, which are essential in financial ML systems.
+A Flask-based interface allows users to:
 
-🖥️ Web Application
+- Enter borrower details manually
+- Get instant default prediction
+- View probability/confidence score
+- Store predictions for later analysis
 
-A Flask-based web interface allows users to:
+Designed to simulate a **real credit risk decision support tool**, not just a demo.
 
-Enter borrower details manually
+## 🏗️ Project Structure
 
-Receive instant default predictions
-
-View probability/confidence scores
-
-Store predictions for further analysis
-
-The application is designed to simulate a real-world credit risk decision support tool, not a toy demo.
-
-🏗️ Project Structure
+```
 Loan-Default-Prediction-System/
 │
-├── app.py # Flask application
-├── train_model.py # Model training pipeline
-├── hybrid_ensemble_model.py # Weighted ensemble logic
-├── comparative_analysis.py # Model performance comparison
-├── generate_all_visualizations.py # Automated plots and reports
-├── model_utils.py # Shared utilities and helpers
+├── app.py                         # Flask application
+├── train_model.py                 # Model training pipeline
+├── hybrid_ensemble_model.py       # Weighted ensemble logic
+├── comparative_analysis.py        # Model performance comparison
+├── generate_all_visualizations.py # Automated plots
+├── model_utils.py                 # Utility functions
 │
-├── data/ # Dataset (raw / processed samples)
-├── static/ # Frontend assets (CSS, JavaScript)
-├── templates/ # HTML templates (Jinja2)
-├── visualizations/ # ROC curves and performance charts
+├── data/                          # Dataset (sample/processed)
+├── static/                        # CSS, JS
+├── templates/                     # HTML templates
+├── visualizations/                # ROC curves & charts
 │
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-└── .gitignore # Ignored files and directories
+├── requirements.txt
+├── Procfile
+├── README.md
+└── .gitignore
+```
 
-🚀 How to Run Locally
-1️⃣ Install dependencies
+## 🚀 How to Run Locally
+
+### 1️⃣ Install dependencies
+
 pip install -r requirements.txt
 
-2️⃣ Verify ML libraries
+### 2️⃣ Verify ML libraries
+
 python -c "import xgboost, lightgbm, catboost; print('OK')"
 
-3️⃣ Train models
+### 3️⃣ Train models
+
 python train_model.py
 
-4️⃣ Run ensemble and evaluation
+### 4️⃣ Run ensemble & evaluation
+
 python hybrid_ensemble_model.py
 python comparative_analysis.py
 python generate_all_visualizations.py
 
-5️⃣ Start the web application
+### 5️⃣ Start web app
+
 python app.py
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Language: Python
+- **Language:** Python
+- **ML:** Scikit-learn, XGBoost, LightGBM, CatBoost
+- **Backend:** Flask
+- **Visualization:** Matplotlib, Seaborn
+- **Data Handling:** Pandas, NumPy
 
-Machine Learning: Scikit-learn, XGBoost, LightGBM, CatBoost
+## 📈 Key Takeaways
 
-Backend: Flask
+- Demonstrates **production-oriented ML thinking**
+- Focuses on **model evaluation, not just accuracy**
+- Shows understanding of **credit risk modeling**
+- Bridges **machine learning + backend deployment**
 
-Visualization: Matplotlib, Seaborn
+## 👩‍💻 Author
 
-Data Processing: Pandas, NumPy
-
-📈 Key Takeaways
-
-Demonstrates production-focused ML system design
-
-Emphasizes evaluation and model reliability, not just accuracy
-
-Shows practical understanding of credit risk modeling
-
-Integrates machine learning with backend deployment
-
-👩‍💻 Author
-
-Shruthika T R
+**Shruthika T R**
 B.Tech — Artificial Intelligence & Data Science
-GitHub: https://github.com/shruthika-tr
+GitHub: [https://github.com/shruthika-tr](https://github.com/shruthika-tr)
