@@ -1,0 +1,58 @@
+
+================================================================================
+                    MODEL COMPARISON SUMMARY REPORT
+================================================================================
+
+Dataset: Loan Default Prediction
+Total Models Compared: 7
+Test Set Size: ~20% of total dataset
+
+--------------------------------------------------------------------------------
+BEST PERFORMING MODELS BY METRIC:
+--------------------------------------------------------------------------------
+
+Best Accuracy: XGBoost (Baseline) (0.625)
+Best AUC-ROC:  LightGBM (0.6942)
+Best F1-Score: XGBoost (Baseline) (0.6667)
+
+--------------------------------------------------------------------------------
+PROPOSED MODEL (HWELDP) PERFORMANCE:
+--------------------------------------------------------------------------------
+
+Model: Proposed (HWELDP)
+Accuracy:  0.55
+Precision: 0.56
+Recall:    0.6667
+F1-Score:  0.6087
+AUC-ROC:   0.614
+
+Training Time: 0.49 seconds
+
+--------------------------------------------------------------------------------
+ALL MODELS PERFORMANCE SUMMARY:
+--------------------------------------------------------------------------------
+
+Logistic Regression:
+  Accuracy: 0.55 | F1-Score: 0.6538 | AUC-ROC: 0.594
+
+Decision Tree:
+  Accuracy: 0.525 | F1-Score: 0.5957 | AUC-ROC: 0.5526
+
+Random Forest:
+  Accuracy: 0.575 | F1-Score: 0.6383 | AUC-ROC: 0.6617
+
+XGBoost (Baseline):
+  Accuracy: 0.625 | F1-Score: 0.6667 | AUC-ROC: 0.6892
+
+LightGBM:
+  Accuracy: 0.6 | F1-Score: 0.6364 | AUC-ROC: 0.6942
+
+CatBoost:
+  Accuracy: 0.5 | F1-Score: 0.6 | AUC-ROC: 0.609
+
+Proposed (HWELDP):
+  Accuracy: 0.55 | F1-Score: 0.6087 | AUC-ROC: 0.614
+
+================================================================================
+Note: For detailed analysis, refer to comparison_table.csv and comparison_results.json
+================================================================================

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Loan Defaulter - Assessment</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="card">
+        <header>
+            <h1>Loan Defaulter Assessment — Bank Form</h1>
+            <p class="lead">Fill each section. Click <strong>Predict</strong> when completed.</p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="alerts">
+            {% for category, message in messages %}
+            <div class="alert {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form id="multiForm" method="post" action="{{ url_for('predict') }}">
+            <div class="stepper">
+                <div class="step active" data-step="1">1. Borrower</div>
+                <div class="step" data-step="2">2. Jobs</div>
+                <div class="step" data-step="3">3. Classification</div>
+                <div class="step" data-step="4">4. Finance</div>
+            </div>
+
+            <!-- step 1 -->
+            <section class="form-step form-step-active">
+                <label class="full">Loan Term (Months)
+                    <input name="Term" type="number" placeholder="E.g. 60" required>
+                    <small>Term of the loan in months (e.g. 36, 60)</small>
+                </label>
+
+                <label class="full">No. of Employees
+                    <input name="NoEmp" type="number" placeholder="E.g. 25" required>
+                    <small>Number of employees at business</small>
+                </label>
+
+                <label class="full">Business Type (New/Existing)
+                    <select name="NewExist" required>
+                        <option value="Existing">Existing Business</option>
+                        <option value="New">New Business</option>
+                    </select>
+                    <small>Existing business tends to have lower risk vs new startups</small>
+                </label>
+
+                <div class="actions">
+                    <button type="button" class="btn next">Next</button>
+                </div>
+            </section>
+
+            <!-- step 2 -->
+            <section class="form-step">
+                <label class="half">Jobs Created
+                    <input name="CreateJob" type="number" placeholder="E.g. 3">
+                    <small>Projected jobs created by this loan</small>
+                </label>
+
+                <label class="half">Jobs Retained
+                    <input name="RetainedJob" type="number" placeholder="E.g. 10">
+                    <small>Jobs retained due to loan</small>
+                </label>
+
+                <div class="actions">
+                    <button type="button" class="btn prev">Back</button>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+            </section>
+
+            <!-- step 3 -->
+            <section class="form-step">
+                <label class="half">Franchise Status
+                    <select name="FranchiseCode" required>
+                        <option value="0">Independent</option>
+                        <option value="1">Franchise</option>
+                    </select>
+                    <small>0 = independent; 1 = franchise</small>
+                </label>
+
+                <label class="half">Location (Urban/Rural)
+                    <select name="UrbanRural" required>
+                        <option value="0">Unknown</option>
+                        <option value="1">Urban</option>
+                        <option value="2">Rural</option>
+                    </select>
+                </label>
+
+                <label class="full">Low Documentation Loan
+                    <select name="LowDoc" required>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                    <small>LowDoc = 1 means minimal documentation (higher risk)</small>
+                </label>
+
+                <div class="actions">
+                    <button type="button" class="btn prev">Back</button>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+            </section>
+
+            <!-- step 4 -->
+            <section class="form-step">
+                <label class="full">Charged Off Principal (Gross)
+                    <input name="ChgOffPrinGr" type="number" placeholder="E.g. 0" required />
+                    <small>Charged-off principal gross amount (0 if none)</small>
+                </label>
+
+                <label class="full">SBA Approved Amount (SBA_Appv)
+                    <input name="SBA_Appv" type="number" placeholder="E.g. 500000" required />
+                    <small>Loan amount approved</small>
+                </label>
+
+                <label class="full">Days for Disbursement
+                    <input name="DaysforDisbursement" type="number" placeholder="E.g. 15" required />
+                    <small>Duration (in days) between approval and disbursement</small>
+                </label>
+
+                <div class="actions">
+                    <button type="button" class="btn prev">Back</button>
+                    <button type="submit" class="btn primary">Predict</button>
+                </div>
+            </section>
+        </form>
+
+        <footer class="foot">
+            <small>Fields show abbreviated label plus short meaning for clarity.</small>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

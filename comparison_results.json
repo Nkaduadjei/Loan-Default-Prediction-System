@@ -1,0 +1,93 @@
+{
+  "Logistic Regression": {
+    "metrics": {
+      "accuracy": 0.55,
+      "precision": 0.5483870967741935,
+      "recall": 0.8095238095238095,
+      "f1_score": 0.6538461538461539,
+      "training_time": 1.730592966079712,
+      "prediction_time": 0.0025703907012939453,
+      "auc_roc": 0.5939849624060151
+    },
+    "training_time": 1.730592966079712,
+    "prediction_time": 0.0025703907012939453
+  },
+  "Decision Tree": {
+    "metrics": {
+      "accuracy": 0.525,
+      "precision": 0.5384615384615384,
+      "recall": 0.6666666666666666,
+      "f1_score": 0.5957446808510638,
+      "training_time": 0.005364894866943359,
+      "prediction_time": 0.00200653076171875,
+      "auc_roc": 0.5526315789473684
+    },
+    "training_time": 0.005364894866943359,
+    "prediction_time": 0.00200653076171875
+  },
+  "Random Forest": {
+    "metrics": {
+      "accuracy": 0.575,
+      "precision": 0.5769230769230769,
+      "recall": 0.7142857142857143,
+      "f1_score": 0.6382978723404256,
+      "training_time": 0.14575505256652832,
+      "prediction_time": 0.05536699295043945,
+      "auc_roc": 0.6616541353383459
+    },
+    "training_time": 0.14575505256652832,
+    "prediction_time": 0.05536699295043945
+  },
+  "XGBoost (Baseline)": {
+    "metrics": {
+      "accuracy": 0.625,
+      "precision": 0.625,
+      "recall": 0.7142857142857143,
+      "f1_score": 0.6666666666666666,
+      "training_time": 0.041681766510009766,
+      "prediction_time": 0.00623631477355957,
+      "auc_roc": 0.6892230576441103
+    },
+    "training_time": 0.041681766510009766,
+    "prediction_time": 0.00623631477355957
+  },
+  "LightGBM": {
+    "metrics": {
+      "accuracy": 0.6,
+      "precision": 0.6086956521739131,
+      "recall": 0.6666666666666666,
+      "f1_score": 0.6363636363636364,
+      "training_time": 0.019749164581298828,
+      "prediction_time": 0.0036919116973876953,
+      "auc_roc": 0.6942355889724311
+    },
+    "training_time": 0.019749164581298828,
+    "prediction_time": 0.0036919116973876953
+  },
+  "CatBoost": {
+    "metrics": {
+      "accuracy": 0.5,
+      "precision": 0.5172413793103449,
+      "recall": 0.7142857142857143,
+      "f1_score": 0.6,
+      "training_time": 0.27709197998046875,
+      "prediction_time": 0.0017428398132324219,
+      "auc_roc": 0.6090225563909776
+    },
+    "training_time": 0.27709197998046875,
+    "prediction_time": 0.0017428398132324219
+  },
+  "Proposed (HWELDP)": {
+    "metrics": {
+      "accuracy": 0.475,
+      "precision": 0.5,
+      "recall": 0.5238095238095238,
+      "f1_score": 0.5116279069767442,
+      "auc_roc": 0.5488721804511278,
+      "training_time": 0.38926029205322266,
+      "prediction_time": 0.07896590232849121
+    },
+    "training_time": 0.38926029205322266,
+    "prediction_time": 0.07896590232849121
+  }
+}

@@ -1,0 +1,9 @@
+__pycache__/
+xgb_env/
+catboost_info/
+Serialized Trained Model/
+submissions.db
+*.pkl
+*.joblib
+.env
+.DS_Store
